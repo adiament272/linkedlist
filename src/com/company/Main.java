@@ -9,6 +9,13 @@ public class Main {
         System.out.println(myList);
 
 
-        LinkedList.add();
+        myList.add("dig");
+        myList.add("yes");
+        myList.add("32");
+        myList.add("1244");
+        myList.add("12322");
+        myList.add(3,"7535");
+        myList.add("12323232");
+        myList.add("123223222");
     }
 }

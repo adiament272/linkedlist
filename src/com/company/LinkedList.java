@@ -6,7 +6,7 @@ import org.w3c.dom.ls.LSOutput;
 public class LinkedList {
     Node node1;
     Node head;
-
+    int count;
 
 
     public LinkedList(){
@@ -17,18 +17,51 @@ public class LinkedList {
     }
 
 
-    public void add(Object itemToAdd){
+    public boolean add(Object itemToAdd){
+        Node currentNode = head;
+        Node newNode = new Node(itemToAdd);
+        int counter = -1;
         if(head == null) {
-            Node newNode = new Node(itemToAdd);
             head = newNode;
+            System.out.println("processing");
+            return true;
         }
         else{
-            Node currentNode = head;
             while(currentNode.next != null){
+                currentNode = currentNode.next;
                 System.out.println("Next node");
+                counter++;
+                System.out.println(counter);
             }
+            currentNode.next = newNode;
+            return true;
+
         }
     }
+    public void add(int count,Object itemToAdd) {
+        Node currentNode = head;
+        Node newNode = new Node(itemToAdd);
+        int counter = -1;
+        if (head == null) {
+            head = newNode;
+            System.out.println("processing");
+
+        } else {
+            while (currentNode.next != null & counter <= count) {
+                currentNode = currentNode.next;
+                System.out.println("Next nodeind");
+                counter++;
+                System.out.println(counter);
+            }
+            Node temp = new Node(itemToAdd);
+            currentNode.next = currentNode;
+            currentNode = temp;
+            currentNode = currentNode.next;
+            System.out.println("Next nodeind2");
+            System.out.println(counter);
+        }
+    }
+
 
     private class Node {
 
@@ -40,7 +73,6 @@ public class LinkedList {
         public Node(Object data){
             this.data = data;
             next = null;
-            System.out.println("Hi");
         }
 
 
@@ -67,11 +99,6 @@ public class LinkedList {
         public void setPrevious(Node previous) {
             this.previous = previous;
         }
-
-    public boolean add(Object item){
-            node1.setNext(new Node(item));
-
-    }
 
     }
 

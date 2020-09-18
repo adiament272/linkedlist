@@ -47,7 +47,7 @@ public class LinkedList {
             System.out.println("processing");
 
         } else {
-            while (currentNode.next != null & counter <= count) {
+            while (currentNode.next != null && counter <= count) {
                 currentNode = currentNode.next;
                 System.out.println("Next nodeind");
                 counter++;
@@ -56,7 +56,6 @@ public class LinkedList {
             Node temp = new Node(itemToAdd);
             currentNode.next = currentNode;
             currentNode = temp;
-            currentNode = currentNode.next;
             System.out.println("Next nodeind2");
             System.out.println(counter);
         }

@@ -8,16 +8,56 @@ public class Main {
         LinkedList myList = new LinkedList();
         System.out.println(myList);
 
+        // INITIAL LIST with 10 obj
 
-        myList.add("dig");
-        myList.add("yes");
-        myList.add("32");
-        myList.add("1244");
-        myList.add("12322");
-        myList.add(3,"832898323892");
-        myList.add("12323232");
-        myList.add(6,32232);
-        myList.add("123223222");
-        System.out.println(myList);
+        myList.add("a");
+        myList.add("b");
+        myList.add("c");
+        myList.add("d");
+        myList.add("e");
+        myList.add("f");
+        myList.add("g");
+        myList.add("h");
+        myList.add("i");
+        myList.add("j");
+        System.out.println("------------INITIAL---------");
+        myList.display();
+        System.out.println("---------MODS------------");
+        // MODIFICATIONS
+        myList.set(6,"N");
+        myList.add(3,"k");
+        myList.addFirst("L");
+        myList.addLast("M");
+        myList.display();
+        System.out.println("-----------POLLING----------");
+
+        // polling and removing
+        myList.remove(3);
+        myList.remove("c");
+        myList.poll();
+        myList.pollLast();
+        myList.display();
+        System.out.println("-----------RETRIEVE----------");
+
+        // retrieving info i.e. "the getters"
+        System.out.println(myList.get(3));
+        System.out.println(myList.getFirst());
+        System.out.println(myList.getLast());
+        System.out.println(myList.indexOf("e"));
+        System.out.println(myList.lastIndexOf("k"));
+        System.out.println(myList.contains("c"));
+        System.out.println(myList.contains("i"));
+        System.out.println(myList.size());
+
+
+        // clear
+        myList.clear();
+
+
+
+
+
+
+
     }
 }
